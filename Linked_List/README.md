@@ -3,10 +3,6 @@ A linked list is a linear data structure, in which the elements are not stored a
 Types of linked lists: 
 There are mainly three types of linked lists:
 
-Single-linked list
-Double linked list
-Circular linked list
-
 1. Single-linked list:
 In a singly linked list, each node contains a reference to the next node in the sequence. Traversing a singly linked list is done in a forward direction.
 ![image](https://github.com/thiennguyenhieu/Data_Structures_And_Algorithms/blob/master/Linked_List/Singlelinkedlist.png)
