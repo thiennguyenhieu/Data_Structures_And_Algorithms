@@ -21,7 +21,7 @@ public:
 
     void insert(T value);
     void remove(T value);
-    uint size() const;
+    unsigned int size() const;
 
     // At first traverse left subtree then visit the root and then traverse the right subtree.
     void printInOrder();
@@ -34,7 +34,7 @@ public:
  
 private:
     Node<T>* m_root {nullptr};
-    uint m_size {0};
+    unsigned int m_size {0};
 
     Node<T>* newNode(T value);
     Node<T>* insert(Node<T>* root, T value);
@@ -203,7 +203,7 @@ void BinarySearchTree<T>::deleteTree(Node<T>* root)
 }
 
 template <class T> 
-uint BinarySearchTree<T>::size() const
+unsigned int BinarySearchTree<T>::size() const
 {
     return m_size;
 }

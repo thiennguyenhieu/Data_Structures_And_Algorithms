@@ -11,7 +11,7 @@ struct AVLNode
     T key;
     AVLNode<T>* left;
     AVLNode<T>* right;
-    uint height;
+    unsigned int height;
 };
 
 template <class T>
@@ -23,7 +23,7 @@ public:
 
     void insert(T value);
     void remove(T value);
-    uint size() const;
+    unsigned int size() const;
 
     // At first traverse left subtree then visit the root and then traverse the right subtree.
     void printInOrder();
@@ -36,11 +36,11 @@ public:
  
 private:
     AVLNode<T>* m_root {nullptr};
-    uint m_size {0};
+    unsigned int m_size {0};
 
     AVLNode<T>* newNode(T value);
     int getBalance(AVLNode<T>* node);
-    uint height(AVLNode<T>* node) const;
+    unsigned int height(AVLNode<T>* node) const;
     AVLNode<T>* minValueNode(AVLNode<T>* node);
     AVLNode<T>* leftRotate(AVLNode<T>* x);
     AVLNode<T>* rightRotate(AVLNode<T>* y);
@@ -115,7 +115,7 @@ int AVLTree<T>::getBalance(AVLNode<T>* node)
 }
 
 template <class T> 
-uint AVLTree<T>::height(AVLNode<T>* node) const
+unsigned int AVLTree<T>::height(AVLNode<T>* node) const
 { 
     return (node == nullptr) ? 0 : node->height;
 }
@@ -349,7 +349,7 @@ void AVLTree<T>::deleteTree(AVLNode<T>* root)
 }
 
 template <class T> 
-uint AVLTree<T>::size() const
+unsigned int AVLTree<T>::size() const
 {
     return m_size;
 }

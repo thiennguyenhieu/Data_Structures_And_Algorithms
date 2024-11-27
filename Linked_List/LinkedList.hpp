@@ -20,13 +20,13 @@ public:
     void append(T value); // insert a new node at the end of the list
     void push(T value); // insert a new node on the front of the list
     void reverse();
-    void removeByPos(uint pos);
-    uint size() const;
+    void removeByPos(unsigned int pos);
+    unsigned int size() const;
     void print();
 
 private:
     Node<T>* m_head {nullptr};
-    uint m_size {0};
+    unsigned int m_size {0};
 
     Node<T>* newNode(T value);
     void deleteList();
@@ -123,7 +123,7 @@ void LinkedList<T>::reverse()
 }
 
 template <class T>
-void LinkedList<T>::removeByPos(uint pos)
+void LinkedList<T>::removeByPos(unsigned int pos)
 {
     if (m_head == nullptr || pos >= m_size)
     {
@@ -155,7 +155,7 @@ void LinkedList<T>::removeByPos(uint pos)
 }
 
 template <class T>
-uint LinkedList<T>::size() const
+unsigned int LinkedList<T>::size() const
 {
     return m_size;
 }

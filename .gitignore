@@ -1,3 +1,4 @@
 .DS_Store
 *.dSYM
-main
+main.*
+vc140.pdb
