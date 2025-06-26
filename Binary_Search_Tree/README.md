@@ -1,15 +1,27 @@
-A Binary Search Tree (BST) is a special type of binary tree in which the left child of a node has a value less than the node’s value and the right child has a value greater than the node’s value. This property is called the BST property and it makes it possible to efficiently search, insert, and delete elements in the tree.
+# Binary Search Tree (BST)
+A Binary Search Tree (BST) is a hierarchical data structure that stores elements (often numbers or comparable types) in a sorted binary tree format. Each node in a BST contains:
+- A value (key)
+- A pointer to the left child (containing smaller values)
+- A pointer to the right child (containing larger values)
 
-The root of a BST is the node that has the largest value in the left subtree and the smallest value in the right subtree. Each left subtree is a BST with nodes that have smaller values than the root and each right subtree is a BST with nodes that have larger values than the root.
+This structure enforces the BST property:
+For any given node, all elements in its left subtree are less than the node’s key, and all elements in the right subtree are greater.
 
-Binary Search Tree is a node-based binary tree data structure that has the following properties: 
-
-The left subtree of a node contains only nodes with keys lesser than the node’s key.
-The right subtree of a node contains only nodes with keys greater than the node’s key.
-This means everything to the left of the root is less than the value of the root and everything to the right of the root is greater than the value of the root. Due to this performing, a binary search is very easy.
-The left and right subtree each must also be a binary search tree.  
-There must be no duplicate nodes (BST may have duplicate values with different handling approaches)
-
+## Example Tree Structure
+Given the following insert sequence:
+```cpp
+bst.insert(8);
+bst.insert(3);
+bst.insert(10);
+bst.insert(1);
+bst.insert(6);
+bst.insert(14);
+bst.insert(4);
+bst.insert(7);
+bst.insert(13);
+```
+The resulting BST looks like this:
+```
                               8
                           /       \
                          3        10
@@ -17,3 +29,4 @@ There must be no duplicate nodes (BST may have duplicate values with different h
                       1     6       14
                           /   \     /
                          4     7   13
+```

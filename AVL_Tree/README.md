@@ -1,5 +1,4 @@
 ## AVL Tree Implementation
-
 This project implements an AVL Tree, a self-balancing binary search tree (BST). It ensures that the difference in height between the left and right subtrees of any node is at most one, maintaining O(log n) time complexity for insertion, deletion, and lookup operations.
 
 ## 📈 Balancing Logic
